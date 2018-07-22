@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SMO-t3-aUg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wV5-ZN-XUv">
+            <objects>
+                <viewController id="SMO-t3-aUg" customClass="ARViewController" customModule="aodh_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cjb-0L-eh9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgE-ka-HYr">
+                                <rect key="frame" x="321" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2TG-p7-QG4"/>
+                                    <constraint firstAttribute="width" constant="30" id="NRi-kl-yOA"/>
+                                </constraints>
+                                <state key="normal" title="📸"/>
+                                <connections>
+                                    <action selector="take:" destination="SMO-t3-aUg" eventType="touchUpInside" id="4pF-tO-EhG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AnW-16-fUD" firstAttribute="trailing" secondItem="mgE-ka-HYr" secondAttribute="trailing" constant="24" id="BoK-kN-zp3"/>
+                            <constraint firstItem="mgE-ka-HYr" firstAttribute="top" secondItem="AnW-16-fUD" secondAttribute="top" id="h9F-0p-E1b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AnW-16-fUD"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="mgE-ka-HYr" id="tfi-hn-ubt"/>
+                        <segue destination="E1F-16-ENc" kind="show" identifier="ShowSpotDetail" id="0B7-fP-kPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqe-BR-YNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="126"/>
+        </scene>
+        <!--SpotDetail-->
+        <scene sceneID="RTC-FC-i4Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SpotDetail" id="E1F-16-ENc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ib-fM-av1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="125"/>
+        </scene>
+    </scenes>
+</document>
